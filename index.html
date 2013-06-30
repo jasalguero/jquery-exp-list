@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="vendor/jquery-1.10.1.js" type="text/javascript"></script>
+    <script src="js/jquery.expandable.list.js" type="text/javascript"></script>
+</head>
+<body>
+
+<h1>Expandable list</h1>
+<ul id="list">
+    <li><span>Element1</span>
+        <ul>
+            <li>
+                Elem1.1
+                <ul>
+                    <li>
+                        Elem1.3
+                    </li>
+                    <li>
+                        Elem1.4
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Elem1.2
+            </li>
+        </ul>
+    </li>
+    <li><span>Element2</span>
+        <ul>
+            <li>
+                Elem1.1
+            </li>
+            <li>
+                Elem1.2
+            </li>
+        </ul>
+    </li>
+    <li>Element3</li>
+</ul>
+
+
+    <script type="text/javascript">
+        $('#list').expList();
+    </script>
+</body>
+</html>
