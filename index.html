@@ -8,7 +8,42 @@
 <body>
 
 <h1>Expandable list</h1>
-<ul id="list">
+<ul id="list1" class="list">
+    <li><span>Element1</span>
+        <ul>
+            <li>
+                Elem1.1<a href="http://www.google.com">link</a>
+                <p>
+
+                </p>
+                <ul>
+                    <li>
+                        Elem1.3
+                    </li>
+                    <li>
+                        Elem1.4
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Elem1.2
+            </li>
+        </ul>
+    </li>
+    <li><span>Element2</span>
+        <ul>
+            <li>
+                Elem1.1
+            </li>
+            <li>
+                Elem1.2
+            </li>
+        </ul>
+    </li>
+    <li>Element3</li>
+</ul>
+
+<ul class="list">
     <li><span>Element1</span>
         <ul>
             <li>
@@ -42,7 +77,7 @@
 
 
     <script type="text/javascript">
-        $('#list').expList();
+        $('.list').expList();
     </script>
 </body>
 </html>

@@ -4,12 +4,12 @@ $.fn.extend
     opts = $.extend {}, self.default_options, options
     $(this).each (i, elem) ->
       self.init elem, opts
-      self.log elem if opts.log
 
 $.extend $.fn.expList,
   default_options:
     log: true
     duration: 600
+    enableLinks: true
 
   init: (elem, opts) ->
     $(elem).find('ul').hide()
@@ -24,3 +24,9 @@ $.extend $.fn.expList,
           e.stopPropagation();
         )
 
+    #enable links inside the list unbinding the event and stopping the even bubbling
+    if opts.enableLinks
+      $(elem).find('a').off('click')
+      .on('click', (e) ->
+        e.stopPropagation()
+      )

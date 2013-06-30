@@ -7,10 +7,7 @@
       self = $.fn.expList;
       opts = $.extend({}, self.default_options, options);
       return $(this).each(function(i, elem) {
-        self.init(elem, opts);
-        if (opts.log) {
-          return self.log(elem);
-        }
+        return self.init(elem, opts);
       });
     }
   });
@@ -18,24 +15,29 @@
   $.extend($.fn.expList, {
     default_options: {
       log: true,
-      duration: 600
+      duration: 600,
+      enableLinks: true
     },
     init: function(elem, opts) {
-      var child, childrenList, _i, _len, _results;
+      var child, childrenList, _fn, _i, _len;
 
       $(elem).find('ul').hide();
       childrenList = $(elem).find('li:has(ul)');
-      _results = [];
+      _fn = function() {
+        return $(child).click(function(e) {
+          $(e.target).closest('li').children('ul').toggle(opts.duration);
+          return e.stopPropagation();
+        });
+      };
       for (_i = 0, _len = childrenList.length; _i < _len; _i++) {
         child = childrenList[_i];
-        _results.push((function() {
-          return $(child).click(function(e) {
-            $(e.target).closest('li').children('ul').toggle(opts.duration);
-            return e.stopPropagation();
-          });
-        })());
+        _fn();
       }
-      return _results;
+      if (opts.enableLinks) {
+        return $(elem).find('a').off('click').on('click', function(e) {
+          return e.stopPropagation();
+        });
+      }
     }
   });
 
