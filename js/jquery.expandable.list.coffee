@@ -7,7 +7,6 @@ $.fn.extend
 
 $.extend $.fn.expList,
   default_options:
-    log: true
     duration: 600
     enableLinks: true
 
