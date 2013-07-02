@@ -1,0 +1,29 @@
+{
+    "name": "expandable.list",
+    "version": "0.1",
+    "title": "Expandable List",
+    "description": "A jQuery plugin that helps to create expandable lists out of html list elements.",
+    "keywords": [
+        "jquery",
+        "plugin",
+        "list",
+        "expandable"
+    ],
+    "homepage": "https://github.com/jasalguero/jquery-exp-list",
+    "author": {
+        "name": "Jose A. Salguero",
+        "url": "http://jasalguero.com"
+    },
+    "bugs": "https://github.com/jasalguero/jquery-exp-list/issues",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/jasalguero/jquery-exp-list/blob/master/LICENSE-MIT"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.0"
+    },
+    "docs": "https://github.com/jasalguero/jquery-exp-list/blob/master/README.md",
+    "demo": "https://github.com/jasalguero/jquery-exp-list"
+}
