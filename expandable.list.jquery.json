@@ -1,6 +1,6 @@
 {
     "name": "expandable.list",
-    "version": "0.1",
+    "version": "0.1.0",
     "title": "Expandable List",
     "description": "A jQuery plugin that helps to create expandable lists out of html list elements.",
     "keywords": [
